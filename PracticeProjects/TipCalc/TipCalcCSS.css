@@ -1,0 +1,41 @@
+body {
+    background-color: lightslategrey;
+    font-family: "Lato";
+    text-align: center;
+}
+
+#billTotal {
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+.btn {
+    font-size: 20px;
+    font-family: "Lato";
+    background-color: rgb(176, 196, 222);
+    transition-duration: 0.3s;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.btn:hover {
+    background-color: rgb(17, 51, 97);
+    color: white;
+}
+
+.result {
+    font-weight: bold;
+    font-size: 24px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: rgba(230, 230, 250, 0.74);
+    margin-top: 15px;
+    margin-left: 45%;
+    margin-right: 45%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}

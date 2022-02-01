@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="device-width, initial-scale=1" />
+    <title>Tip Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link rel="stylesheet" href="TipCalcCSS.css" />
+  </head>
+  <body>
+    <h1>Tip Calculator</h1>
+    <p>
+      Enter your bill total before tip, then choose how much you'd like to tip.
+    </p>
+    <p style="font-size: 30px">
+      $ <input type="text" id="billTotal" value="" />
+    </p>
+    <br />
+    <div>
+      <button type="button" class="btn" id="fair" onclick="fairTip()">
+        Fair <br />
+        15%
+      </button>
+      <button type="button" class="btn" id="good" onclick="goodTip()">
+        Good <br />
+        20%
+      </button>
+      <button type="button" class="btn" id="great" onclick="greatTip()">
+        Great! <br />
+        25%
+      </button>
+    </div>
+    <div class="result">
+      <p>Tip: <ins id="tipResult"></ins></p>
+      <p>Total: <ins id="totalResult"></ins></p>
+    </div>
+    <script src="TipCalc.js"></script>
+  </body>
+</html>

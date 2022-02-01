@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Html Practice</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cssPractice.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h1>This is a header</h1>
+    <p>This is a paragraph</p>
+    <p id="someText"></p>
+    <div>
+      <button class="button-29" id="hide">Hide</button>
+      <button class="button-29" id="show">Show</button> <br>
+      <button class="button-29" id="fades">Fade In</button>
+      <button class="button-29" id="animation">Animation</button>
+    </div>
+
+    <div id="divX" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+    <div id="divY" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+    <div id="divZ" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+    <div id="animationDiv" class="small" style="width:100px;height:100px;background-color:purple;align-self:center;"></div>
+
+    <p id="demo"></p>
+
+    <script>
+      var num = 3;
+      document.getElementById("demo").innerHTML = num + "3";
+      $(document).ready(function() {
+        $("#hide").click(function(){
+          $("p").hide("fast");
+        });
+      });
+      $(document).ready(function(){
+        $("#show").click(function(){
+          $("p").show("slow");
+        });
+      });
+
+      $(function(){
+        $("#fades").click(function(){
+          $("#divX").fadeToggle();
+          $("#divY").fadeToggle("slow");
+          $("#divZ").fadeToggle(3000);
+        });
+      });
+
+      $(function(){
+        $("#animation").click(function(){
+          var aDiv = $("#animationDiv");
+          if ($("#animationDiv").attr("") = ".small") {
+            aDiv.animate({left: "100px", height: "150px", width: "150px"});
+            $("animationDiv").removeClass("small");
+            $("animationDiv").addClass("big");
+          } else if ($("#animationDiv").attr("") = ".big") {
+            aDiv.animate({right: "100px", height: "100px", width: "100px"})
+            $("animationDiv").removeClass("big");
+            $("animationDiv").addClass("small");
+          };
+        });
+      });
+
+    </script>
+
+  </body>
+</html>

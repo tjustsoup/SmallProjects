@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lightbulb Project</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Counter Project/counterCSS.css" />
+  </head>
+  <!-- 
+    We're going to make a button that turns on a lightbulb when it is on, and turns off a lightbulb when it is on.
+    We'll have 2 images (Image1 and Image2).  Button Onclick, check to see if image is image1.  If so, changes to 2.
+    If image is image2, change to image1.  "bulbon.gif" and "bulboff.gif"
+-->
+  <body>
+    <h1>Here's the lightbulb!</h1>
+    <img id="bulbPic" src="../images/bulboff.gif" />
+    <br />
+    <label class="switch">
+      <input
+        id="toggle"
+        type="checkbox"
+        value="0"
+        onclick="powerButton(this)"
+      />
+	  <span class="slider round">
+    </label>
+  </body>
+
+  <script>
+    function powerButton(target) {
+      if (target.getAttribute("value") == "0") {
+        document.getElementById("bulbPic").src = "../images/bulbon.gif";
+        target.setAttribute("value", "1");
+      } else {
+        document.getElementById("bulbPic").src = "../images/bulboff.gif";
+        target.setAttribute("value", "0");
+      }
+    }
+  </script>
+</html>

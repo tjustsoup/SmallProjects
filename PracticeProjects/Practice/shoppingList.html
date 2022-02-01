@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopping List</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cssPractice.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="shoppingList.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); /*Google API for dope font*/
+    </style>
+  </head>
+
+  <body>
+    <h1>Shopping List</h1>
+    <div>
+      <input type="text" id="item"></input>
+      <br>
+      <button id="add" class="button-29">Add to List</button>
+    </div>
+    <p>
+      <ol style="margin-left: 40%">
+      </ol>
+    </p>
+  </body>
+
+  <script>
+    var deleteBtn = $("<button>", {class: "button-30 delete", style: "margin-left:30px"})
+    deleteBtn.html('&#10060')
+    deleteBtn.on("click", 
+        function(event){
+          $(event.target).parent().remove()
+        }
+    )
+    
+    var completeBtn = $("<button>", {class: "button-30 complete"})
+    completeBtn.html('&#9989')
+    
+    // This function is for the main "add to list" button
+    // It takes the text inside of the entry box and puts it into a list with 2 new buttons (delete and complete)
+    $("#add").click(function(){
+        var item = $("<li>")
+      item.append($("#item").val())
+      deleteBtn.clone(true).appendTo(item)
+      completeBtn.clone(true).appendTo(item)
+      $("ol").append(item);
+    });
+  </script>
+</html>

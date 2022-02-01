@@ -1,0 +1,23 @@
+body {
+  background: powderblue;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+  text-align: center;
+}
+
+#value {
+    font-size: 500%;
+}
+
+#btn {
+    border-radius: 8px;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+#decrease {
+    background-color: rgba(128, 0, 0, 0.67);
+}
+
+#increase {
+    background-color: rgba(0, 128, 0, 0.67);
+}
